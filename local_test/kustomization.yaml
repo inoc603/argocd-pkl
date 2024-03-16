@@ -1,12 +1,5 @@
 resources:
-  - ../base
-
-configMapGenerator:
-  - name: helm-plugin-config
-    files:
-      - plugin.yaml
-      - generate.sh
-      - get-parameters.sh
+  - argocd-repo-server.yaml
 
 generatorOptions:
   disableNameSuffixHash: true
