@@ -10,7 +10,7 @@ spec:
     fileName: "./*.pkl"
   parameters:
     static:
-      - name: pkl-modules
+      - name: pkl_modules
         title: Pkl modules to evaluate
         collectionType: array
         array: ["*.pkl"]

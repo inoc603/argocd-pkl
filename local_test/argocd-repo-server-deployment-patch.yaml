@@ -9,7 +9,7 @@ spec:
         - name: pkl-cmp
           command: [/var/run/argocd/argocd-cmp-server]
           args: [--loglevel, debug]
-          image: argocd-pkl
+          image: inoc603e/argocd-pkl
           imagePullPolicy: IfNotPresent
           securityContext:
             runAsNonRoot: true

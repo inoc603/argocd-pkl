@@ -18,9 +18,11 @@ install: image
 	kustomize build local_test | $k apply -f -
 
 image:
-	docker build -t argocd-pkl ./plugin
-	kind load docker-image -n argocd-test argocd-pkl
+	docker build -t inoc603e/argocd-pkl ./plugin
+	kind load docker-image -n argocd-test inoc603e/argocd-pkl
 
 reload:
 	$(MAKE) install
 	$k delete pod -n argocd -l 'app.kubernetes.io/name=argocd-repo-server'
+	$k delete -f test_apps/basic.yaml
+	$k apply -f test_apps/basic.yaml
